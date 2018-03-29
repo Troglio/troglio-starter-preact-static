@@ -1,16 +1,16 @@
 <p align="center">
-    <img src="https://troglio.com/img/troglio-logo.png" width="256" height="256" alt="Troglio" />
+    <img src="https://troglio.com/img/troglio-logo.png" width="200" height="200" alt="Troglio" />
 </p>
-
+<br />
 
 # Preact-static starter for troglio
 
 This project is an example to start building websites with cool techs like:
-- **React-static:** to generate *real* static pages at build time. Good for SEO, neat to work with.
-- **Preact:** as a way lighter alternative to React
-- **Less:** to get power of mixins, nesting styles etc...
-- **CSS Modules:** to isolate style scope per component (don't overthink about class names...)
-- **Webpack:** to carry annoying jobs like linting, minifying and bundling everything.
+- **[React-static](https://github.com/nozzle/react-static):** to generate *real* static pages at build time. Good for SEO, neat to work with.
+- **[Preact](https://github.com/developit/preact):** as a way lighter alternative to React
+- **[Less](http://lesscss.org/):** to get power of mixins, nesting styles etc...
+- **[CSS Modules](https://github.com/css-modules/css-modules):** to isolate style scope per component (don't overthink about class names...)
+- **[Webpack](https://webpack.js.org/):** to carry annoying jobs like linting, minifying and bundling everything.
 
 
 # Get started
