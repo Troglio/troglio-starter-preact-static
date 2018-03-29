@@ -1,0 +1,35 @@
+.topBar {
+    border-bottom: 1px solid #eee;
+    display: flex; 
+    flex-flow: row nowrap; 
+    align-items: center;
+    justify-content: space-around;
+    height: 65px;
+    position: fixed;
+    max-width: 90%;
+    width: 90%;
+    top:0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.placeholder {
+    display:flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.placeholder.left { justify-content: flex-start; }
+.placeholder.right { justify-content: flex-end; }
+.placeholder.left .button > * { margin-right: auto; }
+.placeholder.right .button > *  { margin-left: auto; }
+
+.button {
+    display:flex;
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}

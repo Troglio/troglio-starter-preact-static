@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    transform: scale(.5);
+}
+
+.holder {
+    /* Clip edges, as some of the lines don't terminate nicely. */
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 50px;        
+}
+

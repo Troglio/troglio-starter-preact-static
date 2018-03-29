@@ -1,0 +1,13 @@
+.page {
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    /* position: relative; */
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(0, 0%, 17%);
+}

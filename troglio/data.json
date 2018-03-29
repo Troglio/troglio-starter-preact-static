@@ -1,0 +1,33 @@
+{
+    "pages": [
+        {
+            "permalink": "/{{title}}",
+            "layout": "default",
+            "body": "Home sweet home :)",
+            "date": null,
+            "attachments": [],
+            "cover": false,
+            "labels": [],
+            "members": [],
+            "archived": false,
+            "list": "__root",
+            "position": 1,
+            "kind": "home",
+            "published": true,
+            "type": "page",
+            "title": "Index",
+            "template": "home",
+            "component": "src/components/all.js",
+            "slug": "index",
+            "mm": null,
+            "yyyy": null,
+            "dd": null,
+            "cardname": "__home",
+            "path": "/",
+            "data": []
+        }
+    ],
+    "config": {
+        "title": "my site."
+    }
+}

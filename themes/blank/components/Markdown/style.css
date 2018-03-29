@@ -1,0 +1,13 @@
+/* @media only screen and (max-width: 610px) {
+    .instagramPost{
+        position:relative; 
+        padding-bottom: calc(155%);
+    }
+}
+
+@media only screen and (min-width: 610px) {
+    .instagramPost{
+        position:relative; 
+        padding-bottom: calc(155%);
+    }
+} */
