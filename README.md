@@ -1,3 +1,5 @@
+<img style="with:200px; height:200px;" src="https://troglio.com/img/troglio-logo.png" alt="Troglio logo" />
+
 # Preact-static starter for troglio
 
 This project is an example to start building websites with cool techs like:
