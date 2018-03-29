@@ -1,4 +1,7 @@
-<img style="with:200px; height:200px;" src="https://troglio.com/img/troglio-logo.png" alt="Troglio logo" />
+<p align="center">
+    <img src="https://troglio.com/img/troglio-logo.png" width="256" height="256" alt="Troglio" />
+</p>
+
 
 # Preact-static starter for troglio
 
