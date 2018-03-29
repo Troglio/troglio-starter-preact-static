@@ -47,8 +47,8 @@ class App extends React.Component {
           <Router>
                 <Switch>
                   {this.state.dynamicRoutes.map((route, i) => (
-                      <Route key={i} exact path={route.troglio.path}
-                        render={props => <All {...props} routeData={route.troglio} siteData={this.state.config} preview />}
+                      <Route key={i} exact path={route.path}
+                        render={props => <All {...props} routeData={route} siteData={this.state.config} preview />}
                       />
                   ))}
                   <Route component={NoMatch} />
