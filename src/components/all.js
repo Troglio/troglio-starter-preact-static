@@ -1,6 +1,6 @@
 import React from 'react'
 import { SiteData, RouteData, Link } from 'react-static'
-import {Templates, Layouts} from "../../themes/troglio-app/index"
+import {Templates, Layouts} from "../../themes/blank/index"
 
 
 export default (props) => { 
