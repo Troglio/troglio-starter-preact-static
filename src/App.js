@@ -1,7 +1,6 @@
 import React from 'react'
 import { Router, Switch, Route, Link } from 'react-static'
 import { hot } from 'react-hot-loader'
-
 import Routes from 'react-static-routes'
 
 import All from "./components/all"
@@ -34,10 +33,16 @@ class App extends React.Component {
       scriptjs('https://p.trellocdn.com/power-up.min.js', () => {
         var t = TrelloPowerUp.iframe();
 
-        /* IF TRELLO IS SUPPLYING NEW DATA */
+        /* IF TRELLO IS SUPPLYING NEW DATA LIVE */
         if(t.args[0].context !== undefined){
-          const pages = t.arg('pages') /* GET PREVIEWED PAGE'S DATA */
-          const config = t.arg('config') /* GET PREVIEWED CONFIG'S DATA */
+
+          /* GET LIVE PAGE'S DATA: an array of pages data ( including paths to generate routes on-the-go ) */
+          const pages = t.arg('pages')
+
+          /* GET LIVE CONFIG'S DATA: an object with the sites properties */
+          const config = t.arg('config')
+
+
           this.setState({dynamicRoutes: pages, config: config, bypassRoutes: true})  
         }
 
@@ -49,9 +54,9 @@ class App extends React.Component {
   render(){
     /* THERE ARE TWO POSSIBLE SCENARIOS: CLASSIC APP    OR     APP IS OPENED IN TRELLO'S PREVIEW */
     if ( this.state.bypassRoutes ) {
-        /* ====================================================================================================== */
-        /* APP IS OPENED FROM TRELLO IN PREVIEW MODE : GENERATE ROUTES AND PROPAGATE NEW DATA INTO RELEVANT PROPS */
-        /* ====================================================================================================== */
+        /* ======================================================================================================== */
+        /* APP IS OPENED FROM TRELLO IN PREVIEW MODE : GENERATE ROUTES ON-THE-GO AND PROPAGATE LIVE DATA INTO PROPS */
+        /* ======================================================================================================== */
         return (
           <Router>
                 <Switch>
@@ -65,9 +70,9 @@ class App extends React.Component {
           </Router>
         )  
     } else {
-        /* ================================================================================ */
-        /* APP IS OPENED NORMALLY BY ANY USER: CLASSIC ROUTES CONFIG FOR PRODUCTION         */
-        /* ================================================================================ */
+        /* ========================================================================================================== */
+        /* APP IS OPENED NORMALLY (not in Trello's preview) : SERVE CLASSIC ROUTES FOR PRODUCTION WITH PUBLISHED DATA */
+        /* ========================================================================================================== */
         return (
         <Router>
           <Routes />
