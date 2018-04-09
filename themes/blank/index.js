@@ -1,3 +1,9 @@
+import Default from "./layouts/Default"
+
+export const Layouts = {
+    default: Default
+}
+
 import Single from "./templates/Single"
 import List from "./templates/List"
 import Archives from "./templates/Archives"
