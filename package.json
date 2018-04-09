@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "markdown-to-jsx": "^6.5.2",
+    "markty": "0.0.4",
     "react": "^16.0.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",

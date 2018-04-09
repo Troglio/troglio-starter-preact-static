@@ -8,6 +8,10 @@ export {
 } from "markdown-to-jsx"
 
 export {
+    markty
+} from "markty"
+
+export {
     Head,
     Router,
     Routes,
