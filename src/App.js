@@ -27,22 +27,28 @@ class App extends React.Component {
   }
 
   componentWillMount () {
+
+    /* IF THE APPLICATION IS OPENED IN AN IFRAME */
     if (typeof window !== "undefined" && this.isCrossOriginFrame() ) {
       const scriptjs = require("scriptjs")
       scriptjs('https://p.trellocdn.com/power-up.min.js', () => {
-        // this.updateRoutes()
         var t = TrelloPowerUp.iframe();
+
+        /* IF TRELLO IS SUPPLYING NEW DATA */
         if(t.args[0].context !== undefined){
-          const pages = t.arg('pages')
-          const config = t.arg('config')
+          const pages = t.arg('pages') /* GET PREVIEWED PAGE'S DATA */
+          const config = t.arg('config') /* GET PREVIEWED CONFIG'S DATA */
           this.setState({dynamicRoutes: pages, config: config, bypassRoutes: true})  
         }
+
       })
     }
+
   }
 
   render(){    
     if ( this.state.bypassRoutes ) {
+        /* HERE WE ARE IN PREVIEW MODE FROM TRELLO: GENERATE ROUTES AND PROPAGATE NEW PROPS */
         return (
           <Router>
                 <Switch>
@@ -56,6 +62,7 @@ class App extends React.Component {
           </Router>
         )  
     } else {
+      /* HERE IS THE CLASSIC ROUTE CONFIG */
       return (
         <Router>
           <Routes />
@@ -64,8 +71,6 @@ class App extends React.Component {
     }
   }
 }
-
-
 
 
 export default hot(module)(App)
