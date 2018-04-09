@@ -8,7 +8,7 @@ export {
 } from "markdown-to-jsx"
 
 export {
-    markty
+    default as markty
 } from "markty"
 
 export {
