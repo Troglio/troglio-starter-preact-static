@@ -46,9 +46,12 @@ class App extends React.Component {
 
   }
 
-  render(){    
+  render(){
+    /* THERE ARE TWO POSSIBLE SCENARIOS: CLASSIC APP    OR     APP IS OPENED IN TRELLO'S PREVIEW */
     if ( this.state.bypassRoutes ) {
-        /* HERE WE ARE IN PREVIEW MODE FROM TRELLO: GENERATE ROUTES AND PROPAGATE NEW PROPS */
+        /* ====================================================================================================== */
+        /* APP IS OPENED FROM TRELLO IN PREVIEW MODE : GENERATE ROUTES AND PROPAGATE NEW DATA INTO RELEVANT PROPS */
+        /* ====================================================================================================== */
         return (
           <Router>
                 <Switch>
@@ -62,8 +65,10 @@ class App extends React.Component {
           </Router>
         )  
     } else {
-      /* HERE IS THE CLASSIC ROUTE CONFIG */
-      return (
+        /* ================================================================================ */
+        /* APP IS OPENED NORMALLY BY ANY USER: CLASSIC ROUTES CONFIG FOR PRODUCTION         */
+        /* ================================================================================ */
+        return (
         <Router>
           <Routes />
         </Router>
